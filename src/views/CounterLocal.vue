@@ -7,19 +7,21 @@
 </template>
 
 <script>
+import { ref, computed } from '@vue/composition-api'
+
 export default {
-  data() {
-    return { count: 0 }
-  },
-  computed: {
-    isEven() {
-      return this.count % 2 === 0
-    },
-  },
-  methods: {
-    increment() {
-      this.count++
-    },
+  setup() {
+    const count = ref(0)
+
+    const isEven = computed(() => {
+      return count.value % 2 === 0
+    })
+
+    function increment() {
+      count.value++
+    }
+
+    return { count, isEven, increment }
   },
 }
 </script>

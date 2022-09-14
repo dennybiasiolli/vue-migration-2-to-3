@@ -1,5 +1,9 @@
+import Vue from 'vue'
+import VueCompositionAPI from '@vue/composition-api'
 import { shallowMount } from '@vue/test-utils'
 import CounterLocal from '@/views/CounterLocal.vue'
+
+Vue.use(VueCompositionAPI)
 
 describe('CounterLocal.vue', () => {
   it('renders as expected', () => {
