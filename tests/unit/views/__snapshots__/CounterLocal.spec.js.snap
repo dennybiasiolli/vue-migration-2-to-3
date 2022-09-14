@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CounterLocal.vue renders as expected 1`] = `
+<div>
+  <p>Count is: 0</p>
+  <p>Number is even</p> <button>Increment</button>
+</div>
+`;
