@@ -2,6 +2,8 @@
   <div id="app">
     <nav>
       <router-link to="/">Home</router-link> |
+      <router-link to="/counter-local">Counter (local)</router-link> |
+      <router-link to="/counter-store">Counter (store)</router-link> |
       <router-link to="/about">About</router-link>
     </nav>
     <router-view/>
