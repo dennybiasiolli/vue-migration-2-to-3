@@ -6,19 +6,13 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import { computed } from 'vue'
 import store from '@/store'
 
-export default {
-  setup() {
-    const count = computed(() => store.state.count)
+const count = computed(() => store.state.count)
 
-    const isEven = computed(() => store.getters.isEven)
+const isEven = computed(() => store.getters.isEven)
 
-    const increment = () => store.dispatch('increment')
-
-    return { count, isEven, increment }
-  },
-}
+const increment = () => store.dispatch('increment')
 </script>
