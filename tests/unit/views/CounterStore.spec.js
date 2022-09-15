@@ -1,10 +1,6 @@
-import Vue from 'vue'
-import VueCompositionAPI from '@vue/composition-api'
 import { shallowMount } from '@vue/test-utils'
 import store from '@/store';
 import CounterStore from '@/views/CounterStore.vue'
-
-Vue.use(VueCompositionAPI)
 
 describe('CounterStore.vue', () => {
   it('renders as expected', () => {
