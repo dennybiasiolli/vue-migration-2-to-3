@@ -7,11 +7,10 @@ describe('CounterLocal.vue', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it('should call increment after button click', () => {
+  it('should call increment after button click', async () => {
     const wrapper = shallowMount(CounterLocal)
-    // FIXME: spying on `wrapper.vm._setupState` methods is a temporary workaround
-    const spyIncrement = jest.spyOn(wrapper.vm._setupState, 'increment')
-    wrapper.find('button').trigger('click')
-    expect(spyIncrement).toHaveBeenCalled()
+    expect(wrapper.find('p').text()).toBe('Count is: 0')
+    await wrapper.find('button').trigger('click')
+    expect(wrapper.find('p').text()).toBe('Count is: 1')
   })
 })
