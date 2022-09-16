@@ -26,8 +26,9 @@ module.exports = {
     '**/tests/unit/**/*.spec.[jt]s?(x)',
     '**/__tests__/*.[jt]s?(x)'
   ],
-  // https://github.com/facebook/jest/issues/6766
-  testURL: 'http://localhost/',
+  testEnvironmentOptions: {
+    url: 'http://localhost/',
+  },
   watchPlugins: [
     require.resolve('jest-watch-typeahead/filename'),
     require.resolve('jest-watch-typeahead/testname')
