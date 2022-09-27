@@ -12,7 +12,7 @@
     "@vue/compat": "^3.2.39",
     "core-js": "^3.8.3",
     "vue": "^3.2.39",
-    "vue-router": "^3.5.1",
+    "vue-router": "^4.1.5",
     "vuex": "^4.0.2"
   },
   "devDependencies": {
