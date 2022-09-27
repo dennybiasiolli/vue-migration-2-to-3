@@ -4,7 +4,7 @@ import CounterLocal from '@/views/CounterLocal.vue'
 describe('CounterLocal.vue', () => {
   it('renders as expected', () => {
     const wrapper = shallowMount(CounterLocal)
-    expect(wrapper).toMatchSnapshot()
+    expect(wrapper.html()).toMatchSnapshot()
   })
 
   it('should call increment after button click', async () => {
