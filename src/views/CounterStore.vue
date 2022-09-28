@@ -8,7 +8,9 @@
 
 <script setup>
 import { computed } from 'vue'
-import store from '@/store'
+import { useStore } from 'vuex'
+
+const store = useStore()
 
 const count = computed(() => store.state.count)
 
